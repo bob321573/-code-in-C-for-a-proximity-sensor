@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+class ProximitySensor {
+public:
+    // Constructor
+    ProximitySensor() {
+        // Initialize random seed
+        std::srand(std::time(0));
+    }
+
+    // Simulate reading proximity distance
+    double readDistance() {
+        // Generate a random distance for simulation (replace this with actual sensor reading)
+        return static_cast<double>(std::rand() % 100) / 10.0;
+    }
+};
+
+int main() {
+    ProximitySensor sensor;
+
+    // Simulate reading proximity distance
+    double distance = sensor.readDistance();
+
+    // Print the proximity distance
+    std::cout << "Proximity Distance: " << distance << " cm" << std::endl;
+
+    return 0;
+}
